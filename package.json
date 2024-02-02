@@ -36,7 +36,6 @@
     "slick-carousel": "^1.8.1",
     "sort-by": "^1.2.0",
     "styled-components": "^5.3.6",
-    "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -69,6 +68,7 @@
     "prettier": "2.7.1",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
+    "typescript": "^5.1.6",
     "webpack": "^5.75.0"
   }
 }
