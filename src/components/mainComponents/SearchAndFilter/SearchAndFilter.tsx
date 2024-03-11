@@ -12,6 +12,7 @@ import { clearAgeState, getAgeFromInput } from 'redux/ageSearchReducer'
 import {
     clearAllCountrysCheckboxes,
     czechChecked,
+    englandChecked,
     germanyChecked,
     hollandChecked,
     lithuaniaChecked,
@@ -115,6 +116,13 @@ const SearchAndFilter = (props: Props) => {
         e.target.checked
             ? dispatch(germanyChecked('Німеччина'))
             : dispatch(germanyChecked(''))
+    }
+    const englandCheckboxChecking = (
+        e: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        e.target.checked
+            ? dispatch(englandChecked('Англія'))
+            : dispatch(englandChecked(''))
     }
     // const greeceCheckboxChecking = (e: React.ChangeEvent<HTMLInputElement>) => {
     //     e.target.checked
@@ -507,6 +515,33 @@ const SearchAndFilter = (props: Props) => {
                                         }}
                                         checked={
                                             countryCheckboxState.checkboxGermany
+                                                ? true
+                                                : false
+                                        }
+                                    />
+                                }
+                            />
+                        </div>
+                        <div className="filter-item">
+                            <FormControlLabel
+                                label="Англія"
+                                className="filter-checkbox"
+                                control={
+                                    <Checkbox
+                                        className="germany-checkbox"
+                                        id="england"
+                                        name="england"
+                                        onChange={englandCheckboxChecking}
+                                        sx={{
+                                            '&.Mui-checked': {
+                                                color: '#EB6A09',
+                                            },
+                                            '& .MuiSvgIcon-root': {
+                                                fontSize: 20,
+                                            },
+                                        }}
+                                        checked={
+                                            countryCheckboxState.checkboxEngland
                                                 ? true
                                                 : false
                                         }

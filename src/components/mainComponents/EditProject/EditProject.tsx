@@ -54,6 +54,7 @@ const EditProject = (props: Props) => {
         'Кіпр',
         'Франція',
         'Фінляндія',
+        'Англія',
     ]
 
     const handleChangeProjectSalary = (

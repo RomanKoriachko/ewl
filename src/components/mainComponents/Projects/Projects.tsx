@@ -281,6 +281,7 @@ const Projects = (props: Props) => {
     let temporaryCountryArr10: ProjectType[] = []
     let temporaryCountryArr11: ProjectType[] = []
     let temporaryCountryArr12: ProjectType[] = []
+    let temporaryCountryArr13: ProjectType[] = []
 
     if (filterState) {
         if (countryCheckboxState.checkboxPoland) {
@@ -343,6 +344,11 @@ const Projects = (props: Props) => {
                 el.country.includes(countryCheckboxState.checkboxFinland)
             )
         }
+        if (countryCheckboxState.checkboxEngland) {
+            temporaryCountryArr13 = tempArr.filter((el: ProjectType) =>
+                el.country.includes(countryCheckboxState.checkboxEngland)
+            )
+        }
         if (
             countryCheckboxState.checkboxPoland === '' &&
             countryCheckboxState.checkboxCzech === '' &&
@@ -355,7 +361,8 @@ const Projects = (props: Props) => {
             countryCheckboxState.checkboxSpain === '' &&
             countryCheckboxState.checkboxCyprus === '' &&
             countryCheckboxState.checkboxFrance === '' &&
-            countryCheckboxState.checkboxFinland === ''
+            countryCheckboxState.checkboxFinland === '' &&
+            countryCheckboxState.checkboxEngland === ''
         ) {
             filtredCountryArr = tempArr
         } else {
@@ -372,6 +379,7 @@ const Projects = (props: Props) => {
                 ...temporaryCountryArr10,
                 ...temporaryCountryArr11,
                 ...temporaryCountryArr12,
+                ...temporaryCountryArr13,
             ]
         }
     } else {
